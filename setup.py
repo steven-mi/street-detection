@@ -3,7 +3,6 @@
 import os
 from setuptools import setup
 
-# get key package details from py_pkg/__version__.py
 about = {}  # type: ignore
 here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'street_situation_detection', '__version__.py')) as f:
@@ -13,8 +12,6 @@ with open(os.path.join(here, 'street_situation_detection', '__version__.py')) as
 with open('README.md', 'r') as f:
     readme = f.read()
 
-# package configuration - for reference see:
-# https://setuptools.readthedocs.io/en/latest/setuptools.html#id9
 setup(
     name=about['__title__'],
     description=about['__description__'],
@@ -27,7 +24,7 @@ setup(
     packages=['street_situation_detection'],
     include_package_data=True,
     python_requires=">=3.5.*",
-    install_requires=['tensorflow'],
+    install_requires=['tensorflow', 'requests'],
     license=about['__license__'],
     zip_safe=False,
     entry_points={
