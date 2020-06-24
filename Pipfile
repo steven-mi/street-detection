@@ -4,9 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "*"
-requests = "*"
-twine = "*"
+tensorflow = "*"
 
 [dev-packages]
 "flake8" = "*"

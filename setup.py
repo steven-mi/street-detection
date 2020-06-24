@@ -6,7 +6,7 @@ from setuptools import setup
 # get key package details from py_pkg/__version__.py
 about = {}  # type: ignore
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'street-situation-detection', '__version__.py')) as f:
+with open(os.path.join(here, 'street_situation_detection', '__version__.py')) as f:
     exec(f.read(), about)
 
 # load the README file and use it as the long_description for PyPI
@@ -24,20 +24,19 @@ setup(
     author=about['__author__'],
     author_email=about['__author_email__'],
     url=about['__url__'],
-    packages=['py_pkg'], # TODO
+    packages=['street_situation_detection'],
     include_package_data=True,
     python_requires=">=3.5.*",
-    install_requires=['numpy', 'requests'], # TODO
+    install_requires=['tensorflow'],
     license=about['__license__'],
     zip_safe=False,
     entry_points={
-        'console_scripts': ['is_street_situation=street-situation-detection.is_street_situation:main'],
+        'console_scripts': ['is_street_situation=street_situation_detection.is_street_situation:main'],
     },
-    package_data={'project': ['default_data.json', 'other_datas/default/*.json']}, # TODO https://pypi.org/project/datafolder/
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3.7',
     ],
-    keywords='package development template'
+    keywords='street situation detection'
 )
