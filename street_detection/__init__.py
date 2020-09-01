@@ -1,8 +1,8 @@
 """
-street_situation_detection
+street_detection
 ~~~~~~
 
-The street_situation_detection - a Python package that is intended
+The street_detection - a Python package that is intended
 to be used as a image analysing tool It can detect if a image was taken
 from a street or not.
 """

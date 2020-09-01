@@ -5,7 +5,7 @@ from setuptools import setup
 
 about = {}  # type: ignore
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'street_situation_detection', '__version__.py')) as f:
+with open(os.path.join(here, 'street_detection', '__version__.py')) as f:
     exec(f.read(), about)
 
 # load the README file and use it as the long_description for PyPI
@@ -21,19 +21,19 @@ setup(
     author=about['__author__'],
     author_email=about['__author_email__'],
     url=about['__url__'],
-    packages=['street_situation_detection'],
+    packages=['street_detection'],
     include_package_data=True,
     python_requires=">=3.5.*",
     install_requires=['tensorflow', 'requests'],
     license=about['__license__'],
     zip_safe=False,
     entry_points={
-        'console_scripts': ['is_street_situation=street_situation_detection.is_street_situation:main'],
+        'console_scripts': ['is_street=street_detection.is_street:main'],
     },
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3.7',
     ],
-    keywords='street situation detection'
+    keywords='street detection'
 )
