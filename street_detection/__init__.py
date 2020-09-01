@@ -21,8 +21,8 @@ def download_and_extract(zip_file_url, output_folder):
 
 
 this_dir, _ = os.path.split(__file__)
-model_path = os.path.join(this_dir, "model", "street-situation-network")
-model_link = "https://github.com/steven-mi/street-detection/releases/download/v1/street-situation-network.zip"
+model_path = os.path.join(this_dir, "model", "street-detection-network")
+model_link = "https://github.com/steven-mi/street-detection/releases/download/v2/street-detection-network.zip"
 if not os.path.isdir(model_path):
     os.makedirs(model_path)
     download_and_extract(model_link, model_path)
