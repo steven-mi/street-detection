@@ -24,7 +24,7 @@ setup(
     packages=['street_detection'],
     include_package_data=True,
     python_requires=">=3.5.*",
-    install_requires=['tensorflow', 'requests'],
+    install_requires=['tensorflow', 'requests', 'pillow'],
     license=about['__license__'],
     zip_safe=False,
     entry_points={
