@@ -70,7 +70,7 @@ def is_street(img) -> bool:
         True if given image is taken from a street
     """
     prediction = model.predict(img)
-    prediction_cat = np.where(prediction == 1)[0][0]
+    prediction_cat = np.argmax(prediction)
     if prediction_cat == 0:
         return False
     else:
