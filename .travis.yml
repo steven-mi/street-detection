@@ -8,8 +8,7 @@ python:
   - 3.5-dev
 
 install:
-  - pip install pipenv
-  - pipenv install --dev
+  - pip install .
 
 script:
-  - pipenv run pytest
+  - pytest
