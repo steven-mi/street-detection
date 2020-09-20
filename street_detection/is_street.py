@@ -53,6 +53,7 @@ def load_image(img_path) -> np.array:
     img_reoriented = reorient_image(img)
 
     img_array = np.array(img_reoriented)
+    img_array = img_array / 255.0
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
 
